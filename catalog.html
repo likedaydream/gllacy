@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Главная – Глейси</title>
+</head>
+<body>
+<div class="wrapper">
+<header class="main-header">
+
+  <nav class="main-nav">
+    <a class="main-header-logo" href="index.html">
+      <img src="img/logo.svg" width="154" height="64" alt="Логотип Глейси">
+    </a>
+    <ul class="site-navigation">
+      <li class="site-navigation-active">
+        <a href="#">Каталог</a>
+        <ul>
+          <li><a href="#">Новинки</a></li>
+          <li><a href="#">Сливочное</a></li>
+          <li><a href="#">Щербеты</a></li>
+          <li><a href="#">Фруктовый лед</a></li>
+          <li><a href="#">Мелорин</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Доставка и оплата</a></li>
+      <li><a href="#">О компании</a></li>
+    </ul>
+    <a class="search-link" href="#">Поиск</a>
+    <a class="login-link" href="#">Вход</a>
+    <a class="cart-link cart-active" href="#" aria-label="Корзина: 2 товара">2 товара</a>
+  </nav>
+  <p class="site-contact-phone">С 10 до 20, ежедневно<br>
+  8 812 450-25-25</p>
+
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="catalog.html">Каталог</a></li>
+    <li><a>Сливочное</a></li>
+  </ul>
+  <h1 class="page-title">Сливочное мороженое</h1>
+</header>
+
+<main class="main">
+
+  <section class="filter">
+    <h2 class="visually-hidden">Фильтры</h2>
+    <form class="filter-form" action="#" method="get">
+      <div class="form-item">
+        <label class="form-item-title" for="filter-form-sort">Сортировка:</label>
+        <div class="form-item-inputs">
+          <select name="sort" id="filter-form-sort">
+            <option value="popular" selected>по популярности</option>
+            <option value="price_asc">сначала недорогие</option>
+            <option value="price_desc">сначала дорогие</option>
+            <option value="fat">по жирности</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-item">
+        <fieldset>
+          <legend class="form-item-title">Цена: 100 руб. – 500 руб.</legend>
+          <div class="form-item-inputs">
+            <label class="visually-hidden" for="filter-form-price_min">Цена, от</label>
+            <input name="price_min" id="filter-form-price_min" type="number" value="100">
+            <label class="visually-hidden" for="filter-form-price_max">Цена, от</label>
+            <input name="price_max" id="filter-form-price_max" type="number" value="500">
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-item">
+        <fieldset>
+          <legend class="form-item-title">Жирность:</legend>
+          <div class="form-item-inputs">
+            <ul class="form-input-list">
+              <li>
+                <label>
+                  <input name="fat" type="radio" value="0">
+                  0%
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input name="fat" type="radio" value="less10" checked>
+                  до 10%
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input name="fat" type="radio" value="less30">
+                  до 30%
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input name="fat" type="radio" value="more30">
+                  выше 30%
+                </label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-item">
+        <fieldset>
+          <legend class="form-item-title">Наполнители:</legend>
+          <div class="form-item-inputs">
+            <ul class="form-input-list">
+              <li>
+                <label>
+                  <input name="fill[]" type="checkbox" value="1" checked>
+                  шоколадные
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input name="fill[]" type="checkbox" value="2" checked>
+                  сахарные присыпки
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input name="fill[]" type="checkbox" value="3">
+                  фрукты
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input name="fill[]" type="checkbox" value="4">
+                  сиропы
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input name="fill[]" type="checkbox" value="5">
+                  джемы
+                </label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-item">
+        <button type="submit">Применить</button>
+      </div>
+
+    </form>
+  </section>
+
+  <section class="catalog">
+    <h2 class="visually-hidden">Найденное мороженое</h2>
+    <ul class="catalog-list">
+      <li class="product-card">
+        <h3 class="product-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+        <img class="product-image" src="img/1.jpg" width="267" height="267" alt="Мороженое">
+        <div class="product-price">310 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+      <li class="product-card">
+        <h3 class="product-title">Сливочно-кофейное с кусочками шоколада</h3>
+        <img class="product-image" src="img/2.jpg" width="267" height="267" alt="Мороженое">
+        <div class="price">380 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+      <li class="product-card">
+        <h3 class="product-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+        <img class="product-image" src="img/3.jpg" width="267" height="267" alt="Мороженое">
+        <div class="price">355 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+      <li class="product-card">
+        <h3 class="product-title">Сливочное крем-брюле с карамельной подливкой</h3>
+        <img class="product-image" src="img/4.jpg" width="267" height="267" alt="Мороженое">
+        <div class="price">415 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+
+      <li class="product-card">
+        <h3 class="product-title">Сливочное с брусничным джемом</h3>
+        <img class="product-image" src="img/5.jpg" width="267" height="267" alt="Мороженое">
+        <div class="product-price">325 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+      <li class="product-card">
+        <h3 class="product-title">Сливочно-черничное с цельными ягодами черники</h3>
+        <img class="product-image" src="img/6.jpg" width="267" height="267" alt="Мороженое">
+        <div class="price">410 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+      <li class="product-card">
+        <h3 class="product-title">Сливочно-лимонное с карамельной присыпкой</h3>
+        <img class="product-image" src="img/7.jpg" width="267" height="267" alt="Мороженое">
+        <div class="price">375 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+      <li class="product-card">
+        <h3 class="product-title">Сливочное с шоколадной стружкой</h3>
+        <img class="product-image" src="img/8.jpg" width="267" height="267" alt="Мороженое">
+        <div class="price">320 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+
+      <li class="product-card">
+        <h3 class="product-title">Сливочно-ванильное с кусочками шоколада</h3>
+        <img class="product-image" src="img/9.jpg" width="267" height="267" alt="Мороженое">
+        <div class="product-price">440 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+      <li class="product-card">
+        <h3 class="product-title">Сливочноe с ментоловым сиропом</h3>
+        <img class="product-image" src="img/10.jpg" width="267" height="267" alt="Мороженое">
+        <div class="price">435 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+      <li class="product-card">
+        <h3 class="product-title">Сливочное с кусочками черного шоколада</h3>
+        <img class="product-image" src="img/11.jpg" width="267" height="267" alt="Мороженое">
+        <div class="price">355 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+      <li class="product-card">
+        <h3 class="product-title">Сливочное с мятным сиропом</h3>
+        <img class="product-image" src="img/12.jpg" width="267" height="267" alt="Мороженое">
+        <div class="price">420 ₽/кг</div>
+        <a class="product-link" href="#">Быстрый просмотр</a>
+      </li>
+    </ul>
+
+    <ul class="pagination">
+      <li class="pagination-prev"><a href="#">предыдущая страница</a></li>
+      <li class="pagination-active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li class="pagination-next"><a href="#">следующая страница</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="main-footer">
+
+  <ul class="footer-social">
+    <li><a href="#" class="social-link social-link-twitter">Twitter</a></li>
+    <li><a href="#" class="social-link social-link-instagram">Instagram</a></li>
+    <li><a href="#" class="social-link social-link-fb">Facebook</a></li>
+    <li><a href="#" class="social-link social-link-vk">Вконтакте</a></li>
+  </ul>
+
+  <ul class="footer-links">
+    <li><a class="link-heart" href="#">Для поставщиков</a></li>
+    <li><a href="#">О производстве</a></li>
+    <li><a href="#">Наши документы</a></li>
+    <li><a href="#">Экологические стандарты</a></li>
+  </ul>
+
+  <div class="made-in">
+    <a class="made-in-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+      <img src="img/logo-htmlacademy-small.svg" width="108" height="38" alt="Логотип htmlacademy">
+    </a>
+    Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
+  </div>
+
+</footer>
+</div>
+
+<section class="login">
+  <h2 class="visually-hidden">Вход</h2>
+  <form class="login-form" action="#" method="post">
+    <div class="form-item">
+      <label class="visually-hidden" for="login-form-email">Электронная почта</label>
+      <input id="login-form-email" name="email" type="email" placeholder="Электронная почта" value="">
+    </div>
+    <div class="form-item">
+      <label class="visually-hidden" for="login-form-password">Пароль</label>
+      <input id="login-form-password" name="password" type="password" placeholder="Пароль" value="">
+    </div>
+    <div class="form-footer">
+      <button type="submit">Войти</button>
+      <a href="#">Забыли пароль?</a>
+      <a href="#">Новая регистрация</a>
+    </div>
+  </form>
+</section>
+
+<section class="search">
+  <h2 class="visually-hidden">Поиск</h2>
+  <form class="search-form" action="#" method="get">
+    <label class="visually-hidden" for="search-form-q">Что ищем?</label>
+    <input name="q" id="search-form-q" type="search" placeholder="Что ищем?" value="">
+  </form>
+</section>
+
+<section class="modal modal-cart-contents">
+  <h2 class="visually-hidden">Корзина</h2>
+  <ul class="cart-list">
+    <li class="cart-item">
+      <h3 class="cart-item-title">Пломбир с апельсиновым джемом</h3>
+      <img src="img/cart-item-1.jpg" width="33" height="33" alt="Превью мороженого">
+      <p class="cart-item-amount">1,5 кг х <span class="cart-item-price">200 руб.</span></p>
+      <p class="cart-item-sum">300 руб.</p>
+      <button class="cart-del-btn" type="button">Удалить из корзины</button>
+    </li>
+    <li class="cart-item">
+      <h3 class="cart-item-title">Клубничный пломбир с присыпкой из белого шоколада</h3>
+      <img src="img/cart-item-2.jpg" width="33" height="33" alt="Превью мороженого">
+      <p class="cart-item-amount">1,5 кг х <span class="cart-item-price">300 руб.</span></p>
+      <p class="cart-item-sum">450 руб.</p>
+      <button class="cart-del-btn" type="button">Удалить из корзины</button>
+    </li>
+  </ul>
+  <p class="cart-sum">Итого: 750 руб.</p>
+  <a class="button" href="#">Оформить заказ</a>
+</section>
+
+</body>
+</html>
