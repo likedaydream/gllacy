@@ -194,7 +194,8 @@ a:not([class]):active {
 
 .dropdown-wrapper:hover > .dropdown-container,
 .dropdown-btn:focus + .dropdown-container,
-.dropdown-container:hover {
+.dropdown-container:hover,
+.dropdown-container.dropdown-show {
   display: block;
 }
 
@@ -681,17 +682,18 @@ a:not([class]):active {
   border-radius: 50%;
 
   cursor: pointer;
+  user-select: none;
 }
 
-.dot-btn:hover,
-.dot-btn:focus {
+.dot-btn:hover {
   background-color: rgba(248, 247, 244, 0.4);
-  outline: none;
 }
 
+.dot-btn:focus,
 .dot-btn-active,
 .dot-btn:active {
   background-color: #ffffff;
+  outline: none;
 }
 
 .promo {
@@ -1199,12 +1201,12 @@ a:not([class]):active {
   color: inherit;
 }
 
-.footer-links .link-heart {
+.link-heart a {
   font-weight: 700;
   padding-left: 0;
 }
 
-.footer-links .link-heart::before {
+.link-heart a::before {
   content: "";
 
   display: inline-block;
